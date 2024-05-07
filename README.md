@@ -23,16 +23,15 @@ To expose your private Kubernetes service into public network. You need public m
 2. Download `frps` [binary](https://github.com/fatedier/frp)
 3. Create server configuration
 ```
-vi frps.ini
+vi frps.toml
 
-[common]
-bind_address = 0.0.0.0
+bind_address = "0.0.0.0"
 bind_port = 7000
-token = yourtoken
+token = "yourtoken"
 ```
 4. Run FRP server
 ```
-frps -c ./frps.ini
+frps -c ./frps.toml
 ```
 
 ## Usage
